@@ -1,12 +1,82 @@
+/* Theming */
+:root {
+  --font-body: var(--font-nunito-sans);
+  --font-brand: var(--font-caveat);
+  --font-title: var(--font-nunito-sans);
+  --font-size-xs: 0.64rem;
+  --font-size-sm: 0.8rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.563rem;
+  --font-size-xxl: 1.953rem;
+  --font-size-xxxl: 2.441rem;
+  --font-size-mega: 3.052rem;
+  --font-size-humongous: 3.815rem;
+  --font-weight-body: 300;
+  --font-weight-brand: 400;
+  --font-weight-title: 800;
+  --line-height-body: 1.5;
+  --line-height-brand: 1;
+  --line-height-title: 1;
+  --spacing-near: 15px;
+  --spacing-far: 30px;
+  --touch-size: 50px;
+  --color-brand-primary: #de0d92; /* hollywood cerise */
+  --color-brand-secondary:  #16db93; /* emerald */
+}
 body.light {
-  --background-color: #fff;
-  --color: #000;
+  --box-shadow: 0 0 16px 0 rgba(191, 191, 191, .5);
+  --color-neutral-0: #fff;
+  --color-neutral-20: #ccc;
+  --color-neutral-40: #999;
+  --color-neutral-60: #666;
+  --color-neutral-80: #333;
+  --color-text-body: #0d1821; /* rich black // or try jet: #363635 */
+  --color-text-brand: #fcfafa; /* sea salt */
+  --color-text-title: #0d1821; /* rich black // or try jet: #363635 */
+  --color-link: #4d6cfa; /* neon blue */
 }
 body.dark {
-  --background-color: #000;
-  --color: #fff;
+  --box-shadow: 0 0 16px 0 rgba(64, 64, 64, .5);
+  --color-neutral-0: #000;
+  --color-neutral-20: #333;
+  --color-neutral-40: #666;
+  --color-neutral-60: #999;
+  --color-neutral-80: #ccc;
+  --color-text-body: #fcfafa; /* sea salt */
+  --color-text-brand: #002a32; /* gun metal */
+  --color-text-title: #fcfafa; /* sea salt */
+  --color-link: #7899d4; /* vista blue */
+}
+
+/* Global base styles and additional resets */
+html {
+  font-size: 100%;
+  font-family: var(--font-body);
+  line-height: 1;
 }
 body {
-  background-color: var(--background-color);
-  color: var(--color);
+  background-color: var(--color-neutral-0);
+  color: var(--color-text-body);
+}
+ul {
+  list-style: none;
+}
+button, input, select, textarea {
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4, h5, h6, p, ul, li, a,
+button, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: none;
+}
+a, a:link, a:visited {
+  color: var(--color-link);
+}
+a:hover, a:active {
+  text-decoration: underline;
 }
